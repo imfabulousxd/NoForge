@@ -22,3 +22,9 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+
+    - name: Upload built jar
+      uses: actions/upload-artifact@v4
+      with:
+        name: noforge-jar
+        path: build/libs/*.jar
